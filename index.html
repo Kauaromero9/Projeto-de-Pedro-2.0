@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #172033; background: #f8fafc; }
+    header { background: white; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px #0001; }
+    .logo { color: #1760ff; font-size: 20px; font-weight: bold; text-decoration: none; }
+    nav { display: flex; align-items: center; gap: 18px; }
+    nav a { color: #334155; text-decoration: none; font-size: 14px; }
+    nav .cadastro { background: #1760ff; color: white; padding: 10px 15px; border-radius: 7px; }
+    .hero { background: linear-gradient(110deg, #1760ff, #203dbb); color: white; padding: 54px 24px; }
+    .hero h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 50px); }
+    .hero p { margin: 0 0 28px; font-size: 17px; }
+    .search { display: flex; gap: 10px; max-width: 650px; }
+    .search input { flex: 1; min-width: 0; padding: 14px; border: 0; border-radius: 7px; font-size: 15px; }
+    .search button { background: white; color: #1760ff; border: 0; border-radius: 7px; padding: 0 24px; font-weight: bold; cursor: pointer; }
+    main { padding: 30px 24px; }
+    main h2 { margin-bottom: 24px; }
+    .livros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .livro { background: white; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px #0001; }
+    .capa { height: 190px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; background: #f1f5f9; color: #475569; font-family: Georgia, serif; font-size: 20px; }
+    .info { padding: 14px; }
+    .info h3 { font-size: 15px; margin: 0 0 9px; }
+    .info p { color: #64748b; font-size: 13px; min-height: 16px; }
+    .info a { display: block; text-align: center; background: #1760ff; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-size: 13px; }
+    @media (max-width: 700px) { .livros { grid-template-columns: repeat(2, minmax(0, 1fr)); } header { padding: 12px; } nav { gap: 10px; } .hero { padding: 38px 18px; } main { padding: 24px 14px; } }
+    @media (max-width: 430px) { .livros { grid-template-columns: 1fr; } .capa { height: 220px; } .logo { font-size: 17px; } nav a { font-size: 12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">▢ Biblioteca</a>
+    <nav>
+      <a href="login.html">Login</a>
+      <a class="cadastro" href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à Biblioteca</h1>
+    <p>Descubra milhões de livros e organize seus favoritos</p>
+    <form class="search" action="#" method="get">
+      <input type="search" name="busca" placeholder="Buscar livros, autores..." aria-label="Buscar livros">
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
+
+  <main>
+    <h2>Livros Populares</h2>
+    <section class="livros">
+      <article class="livro"><div class="capa">Library of Congress<br>Subject Headings</div><div class="info"><h3>Library of Congress Subject Headings</h3><p>Library of Congress</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">The Canadian Magazine</div><div class="info"><h3>The Canadian Magazine of Politics, Science, Art and Literature</h3><p>Publicação histórica</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">Parliamentary Debates</div><div class="info"><h3>Parliamentary Debates</h3><p>Arquivo histórico</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">Smithsonian Institution</div><div class="info"><h3>Report of the Assistant Director</h3><p>United States National Museum</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">Encyclopaedia Britannica</div><div class="info"><h3>The Encyclopaedia Britannica</h3><p>Enciclopédia</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">IROHIN</div><div class="info"><h3>Irohin: Taking Africa to the Classroom</h3><p>Revista educacional</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">Numeric List of Lenders</div><div class="info"><h3>Numeric list of lenders</h3><p>Catálogo</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">Music Sociology</div><div class="info"><h3>Music Sociology</h3><p>Raphaël Nowak, Andy Bennett</p><a href="#">Detalhes</a></div></article>
+      <article class="livro"><div class="capa">The Successful Life</div><div class="info"><h3>The successful life: practical words of counsel</h3><p>Successful life</p><a href="#">Detalhes</a></div></article>
+    </section>
+  </main>
+</body>
+</html>
